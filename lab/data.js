@@ -1,0 +1,15 @@
+window.LAB={
+ sources:[['ToothFairy3',508,3046,'public'],['STS24-Labeled',250,1499,'public'],['Collection A',118,708,'hospital'],['Collection B',99,594,'hospital'],['Collection C',90,540,'hospital'],['Collection D',60,360,'hospital'],['Collection E',40,240,'hospital'],['Collection F',22,132,'hospital']],
+ metals:[['amalgam','银汞合金'],['bracket','正畸托槽'],['crown','牙冠'],['crown+amalgam','牙冠＋银汞'],['postcore','桩核'],['implant','种植体']],
+ rubric:{crown:[['edge_sharpness','边缘锐利度','冠部边缘是否清晰锐利'],['geometric_accuracy','几何形态','修复体形态是否完整可辨'],['contact_clear','接触 / 连接清晰度','接触与连接结构是否清楚'],['edge_continuity','边缘连续性','冠部边缘是否连续'],['internal_density','内部密度','内部密度表现是否清晰可评']],adjacent:[['tooth_contour_intact','轮廓完整性','邻牙轮廓是否完整'],['anatomy_recognizable','解剖可辨识性','邻牙解剖结构是否可辨认'],['interproximal_space_clear','邻间隙清晰度','邻间隙是否清楚'],['edge_sharpness','边缘锐利度','邻牙边缘是否清晰锐利'],['dej_clear','釉牙本质界清晰度','釉牙本质界是否可辨认']]},
+ degradation:[['束硬化','高密度金属周围的明暗条纹'],['光子饥饿','高衰减路径形成低信号条带'],['散射','背景偏移与低频阴影'],['噪声','颗粒状起伏与结构可辨性'],['运动','轮廓重影与边缘模糊']],
+};
+// Synthetic illustrations are never presented as real patient images.
+window.phantom=function(seed=0,kind='metal'){
+ let id='p'+seed+'_'+Math.random().toString(36).slice(2,7), teeth='',streaks='';
+ for(let i=0;i<13;i++){let a=(i/12)*Math.PI,x=160+91*Math.cos(a),y=125+83*Math.sin(a);teeth+=`<ellipse cx="${x}" cy="${y}" rx="${10+(i%3)}" ry="17" transform="rotate(${a*180/Math.PI-90} ${x} ${y})" fill="#b0bab0" opacity=".75"/><ellipse cx="${x}" cy="${y}" rx="5" ry="9" fill="#526158"/>`;}
+ let mx=116+(seed%4)*25,my=196-(seed%3)*11;
+ for(let i=0;i<11;i++){let a=(i*1.83+seed),dx=Math.cos(a)*145,dy=Math.sin(a)*145;streaks+=`<path d="M ${mx-dx} ${my-dy} L ${mx+dx} ${my+dy}" stroke="${i%3===0?'#090e0c':'#dce9cd'}" stroke-width="${i%3===0?4:1}" opacity="${i%3===0?.3:.18}"/>`;}
+ return `<svg viewBox="0 0 320 320" role="img" aria-label="合成牙弓示意图，非临床影像"><defs><radialGradient id="${id}"><stop stop-color="#64756b"/><stop offset=".75" stop-color="#303c36"/><stop offset="1" stop-color="#18251f"/></radialGradient></defs><circle cx="160" cy="160" r="138" fill="url(#${id})"/><ellipse cx="160" cy="162" rx="106" ry="112" fill="none" stroke="#9aab99" stroke-width="3" opacity=".3"/><path d="M 65 135 Q 72 238 160 239 Q 248 238 255 135" fill="none" stroke="#8d9e8d" stroke-width="19" opacity=".4"/><path d="M 91 139 Q 90 216 160 217 Q 230 216 229 139" fill="none" stroke="#18241f" stroke-width="12"/>${teeth}${kind==='clean'?'':streaks}<ellipse cx="${mx}" cy="${my}" rx="${seed%2?9:6}" ry="12" fill="#f3f7df"/><ellipse cx="160" cy="100" rx="32" ry="22" fill="#293a32" opacity=".7"/><path d="M 145 101 Q 160 80 175 101" fill="none" stroke="#83907f" stroke-width="3" opacity=".4"/></svg>`;
+};
+LAB.demo=Array.from({length:18},(_,i)=>({id:'DEMO-'+String(i+1).padStart(3,'0'),cohort:i%2?'B':'A',patient:'DEMO-P'+(i+1),fold:i%5,region:i%2?'adjacent':'crown',tasks:i%2?['crown','adjacent']:['crown'],metal:LAB.metals[i%6][0],image:null,seed:i,isDemo:true,timepoint:i%2?'pre':'rated_single',ratings:(i%2?['crown','adjacent']:['crown']).flatMap(task=>LAB.rubric[task].map(([feature],j)=>({task,feature,value:(i+j)%3?1:0,rater:'DEMO'}))),narrative:'演示条目，无真实专家文字说明'}));

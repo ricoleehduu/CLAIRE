@@ -1,0 +1,50 @@
+{
+  "examples": [
+    {
+      "id": "amalgam",
+      "slice": "ToothFairy3S_0026 / z0052",
+      "source": "ToothFairy3",
+      "displayWindow": [
+        -1024,
+        3072
+      ],
+      "images": {
+        "before": "assets/amalgam-before.webp",
+        "amifound": "assets/amalgam-amifound.webp",
+        "horuseye": "assets/amalgam-horuseye.webp",
+        "reference": "assets/amalgam-reference.webp"
+      }
+    },
+    {
+      "id": "crown",
+      "slice": "ToothFairy3S_0026 / z0052",
+      "source": "ToothFairy3",
+      "displayWindow": [
+        -1024,
+        3072
+      ],
+      "images": {
+        "before": "assets/crown-before.webp",
+        "amifound": "assets/crown-amifound.webp",
+        "horuseye": "assets/crown-horuseye.webp",
+        "reference": "assets/crown-reference.webp"
+      }
+    },
+    {
+      "id": "implant",
+      "slice": "ToothFairy3S_0026 / z0052",
+      "source": "ToothFairy3",
+      "displayWindow": [
+        -1024,
+        3072
+      ],
+      "images": {
+        "before": "assets/implant-before.webp",
+        "amifound": "assets/implant-amifound.webp",
+        "horuseye": "assets/implant-horuseye.webp",
+        "reference": "assets/implant-reference.webp"
+      }
+    }
+  ],
+  "note": "Public-source simulation examples; fixed shared intensity window, no HU calibration. CLAIRE evaluates these restorations; it does not generate them."
+}

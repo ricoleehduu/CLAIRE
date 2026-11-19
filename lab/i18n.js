@@ -1,0 +1,358 @@
+'use strict';
+// UI copy only. Annotation values and user-authored evidence are never translated.
+const EN_COPY={
+  "工作空间": "Workspace",
+  "主导航": "Main navigation",
+  "数据图谱": "Data atlas",
+  "CBCT 评分": "CBCT scoring",
+  "专家证据库": "Expert library",
+  "我的标注": "My annotations",
+  "本地研究工作区": "Local research workspace",
+  "从影像观察，到可追溯的证据。": "From image observations to traceable evidence.",
+  "查看数据与协议 ↗": "Data & protocol ↗",
+  "研究用途 · 非临床诊断": "Research use · Not for clinical diagnosis",
+  "模拟数据图谱": "Simulation atlas",
+  "CBCT 评分工作台": "CBCT scoring workspace",
+  "演示模式": "Demo mode",
+  "本地真实数据": "Local research data",
+  "＋ 上传影像": "＋ Upload image",
+  "本地标注者，无身份认证": "Local annotator · Identity not verified",
+  "数据有出处，判断有依据。": "Traceable data. Evidence-based judgments.",
+  "关闭弹窗": "Close dialog",
+  "AgentMAR CBCT 多中心模拟数据与专家证据工作台": "AgentMAR multi-source CBCT simulation and expert evidence workspace",
+  "看见数据的广度。": "Explore the breadth of the data.",
+  "多来源、多金属、多层次证据，让 CBCT 质量评价更可追溯。": "Multiple sources, metal types and levels of evidence for traceable CBCT evaluation.",
+  "↓ 导出来源统计": "↓ Export source statistics",
+  "让影像质量评价，": "Bring image quality evaluation",
+  "回到可观察的解剖结构。": "back to observable anatomy.",
+  "连接多来源模拟数据与真实专家标注，为金属伪影评价提供可操作、可扩展的研究工作台。": "A practical, extensible workspace connecting multi-source simulations and expert annotations for metal-artifact evaluation.",
+  "SYNTHETIC ILLUSTRATION · 非临床影像": "SYNTHETIC ILLUSTRATION · NOT CLINICAL",
+  "主模拟库": "Main simulation corpus",
+  "图像对": "pairs",
+  "个病例 / 切片": "cases / slices",
+  "数据来源": "Data sources",
+  "个": "sources",
+  "2 个公开数据集 · 6 组医院数据": "2 public datasets · 6 hospital collections",
+  "统一模拟清单": "Unified simulation manifest",
+  "组": "variants",
+  "主池 7,119 ＋ 扩展池 52,811": "Main 7,119 ＋ Extension 52,811",
+  "专家先例库": "Expert precedent library",
+  "条": "records",
+  "A295 ＋ B135 处理前条目": "A295 ＋ B135 pre-restoration entries",
+  "多来源数据分布": "Distribution across sources",
+  "主模拟池 · 来源 / 病例 / 配对切片": "Main pool · Sources / Cases / Paired slices",
+  "论文统计": "Paper snapshot",
+  "搜索数据来源": "Search data sources",
+  "搜索数据来源…": "Search data sources…",
+  "来源类型": "Source type",
+  "全部来源": "All sources",
+  "公开数据集": "Public datasets",
+  "医院数据": "Hospital collections",
+  "数据规模与覆盖": "Scale & coverage",
+  "不同数据池，保留独立统计口径": "Separate accounting for each data pool",
+  "主池占统一清单 11.9%": "Main pool: 11.9% of the unified manifest",
+  "主模拟池": "Main simulation pool",
+  "对": "pairs",
+  "扩展参数池": "Extended parameter pool",
+  "牙齿实例 GT 子集": "Tooth-instance GT subset",
+  "病例": "cases",
+  "GT 子集覆盖 3,048 个 slice–metal 对，与来源表分母不同。扩展清单不代表全部完成模型评价。": "The GT subset covers 3,048 slice–metal pairs, with a different denominator from the source table. Not every extended variant has been evaluated.",
+  "59,930 采用实际清单总量口径。": "59,930 is the total in the actual manifest.",
+  "了解数据口径 ↗": "About these counts ↗",
+  "六种金属场景": "Six metal scenarios",
+  "点击探索 · 本地主池真实模拟影像": "Explore · Actual local main-pool simulations",
+  "点击探索 · 图像为合成示意": "Explore · Synthetic illustrations",
+  "退化现象观察维度": "Degradation phenomena",
+  "现象分类 · 不代表已独立模拟全部类型": "Phenomenon taxonomy · Independent simulation coverage is not confirmed for every type",
+  "金属相关观察维度": "Metal-related observation",
+  "独立模拟覆盖待核实": "Independent coverage unverified",
+  "覆盖规模": "Relative scale",
+  "官方 Logo 待补充": "Official logo pending",
+  "没有匹配的数据来源": "No matching data sources",
+  "医院保留匿名 A–F；官方 Logo 待补充，来源名称不等同临床合作授权。": "Hospital collections remain anonymized as A–F. Official logos are pending; source names do not imply an authorized clinical partnership.",
+  "银汞合金": "Amalgam",
+  "正畸托槽": "Bracket",
+  "牙冠": "Crown",
+  "牙冠＋银汞": "Crown + amalgam",
+  "桩核": "Post/core",
+  "种植体": "Implant",
+  "束硬化": "Beam hardening",
+  "高密度金属周围的明暗条纹": "Bright and dark streaks around high-density metal",
+  "光子饥饿": "Photon starvation",
+  "高衰减路径形成低信号条带": "Low-signal bands along high-attenuation paths",
+  "散射": "Scatter",
+  "背景偏移与低频阴影": "Background shifts and low-frequency shading",
+  "噪声": "Noise",
+  "颗粒状起伏与结构可辨性": "Granular variation and structural visibility",
+  "运动": "Motion",
+  "轮廓重影与边缘模糊": "Double contours and blurred edges",
+  "经验，成为可复用的证据。": "Turn expertise into reusable evidence.",
+  "保留原始专家分项、队列与出处，逐步构建可扩展的先例库。": "Preserve original expert labels, cohort and provenance in an extensible precedent library.",
+  "＋ 添加评分案例": "＋ Add a rated case",
+  "已有专家先例": "Existing expert precedents",
+  "295 张单图 ＋ 135 张处理前影像": "295 single images ＋ 135 pre-restoration images",
+  "病例覆盖": "Cases represented",
+  "例": "cases",
+  "A 队列 26 · B 队列 27": "Cohort A: 26 · Cohort B: 27",
+  "原始评分队列": "Annotation cohorts",
+  "套协议": "protocols",
+  "A：双专家 · B：单份分项标签": "A: two raters · B: one set of item labels",
+  "本地新增记录": "New local records",
+  "独立保存 · 待专家复核": "Saved separately · Pending expert review",
+  "专家先例浏览": "Browse expert precedents",
+  "已连接本地真实标注库 · 不上传影像与标签": "Connected to local annotations · Images and labels stay local",
+  "当前显示 18 个合成演示案例 · 上方为项目资料统计": "Showing 18 synthetic demo cases · Metrics above describe the research assets",
+  "430 条本地真实记录": "430 local annotation records",
+  "DEMO / 演示": "DEMO",
+  "按条目编号 / 本地病例别名搜索…": "Search by entry ID or local case alias…",
+  "搜索专家先例": "Search expert precedents",
+  "筛选队列": "Filter cohort",
+  "全部队列": "All cohorts",
+  "A · 单图双专家": "A · Single image, two raters",
+  "B · 处理前标注": "B · Pre-restoration labels",
+  "筛选区域": "Filter region",
+  "全部区域": "All regions",
+  "冠部 Crown": "Crown",
+  "邻域 Adjacent": "Adjacent",
+  "让新的观察，进入下一轮证据积累。": "Add new observations to the evidence workflow.",
+  "拖入 PNG / JPEG → 独立评分 → 本地待复核。新增记录不会自动成为专家真值。": "Drop a PNG / JPEG → Rate independently → Save for local review. New records are not automatically treated as expert ground truth.",
+  "上传影像 ↗": "Upload image ↗",
+  "量表评价 · 留一检索": "Rubric evaluation · Leave-one-out retrieval",
+  "排除查询对，可包含同患者的邻层。库中不写入查询病例的前后结论。": "Excludes the query pair; neighboring slices from the same patient may remain. The query's pre/post conclusions are not stored in the library.",
+  "规模实验 · 患者与折隔离": "Evidence-scale study · Patient and fold isolation",
+  "排除同患者与同 fold；三个先例来自不同患者。当前界面仅浏览先例，不执行向量检索。": "Excludes the query patient and fold; three precedents come from distinct patients. This interface browses precedents and does not run vector retrieval.",
+  "专家身份以原始评分者代号显示，无姓名、职称或机构认证推断。A 队列的双专家一致性不能作为 B 队列的评价上限。": "Experts are shown by original rater codes; names, credentials and affiliations are not inferred. Agreement between cohort A's raters is not a ceiling for cohort B.",
+  "合成演示": "Synthetic demo",
+  "真实标注 · 本地": "Local annotation",
+  "冠部": "Crown",
+  "邻域": "Adjacent",
+  "示例标签，非专家真值": "Demo labels, not expert ground truth",
+  "两位专家独立分项 · 单图": "Independent item labels from two raters · Single image",
+  "原始分项标注 · 处理前": "Original item labels · Pre-restoration",
+  "查看证据 ↗": "View evidence ↗",
+  "没有匹配的先例": "No matching precedents",
+  "尝试更换队列、区域或编号。": "Try a different cohort, region or ID.",
+  "← 上一页": "← Previous",
+  "下一页 →": "Next →",
+  "演示先例": "Demo precedent",
+  "真实专家分项记录": "Original expert item labels",
+  "处理前独立影像": "Independent pre-restoration image",
+  "单图评分": "Single-image rating",
+  "区域": "Region",
+  "条目": "Item",
+  "评分者代号": "Rater code",
+  "原始标签": "Original label",
+  "是 · 1": "Yes · 1",
+  "否 · 0": "No · 0",
+  "不可判定": "Unresolved",
+  "原始资料未包含专家文字解释": "No expert narrative was provided in the source",
+  "演示条目，无真实专家文字说明": "Demo entry; no authentic expert narrative",
+  "此处不生成或补写专家解释。": "Expert narratives are not generated or fabricated here.",
+  "程序生成的示例标签": "Programmatically generated demo labels",
+  "本地 memory_entries.jsonl；病例编号为界面别名，不输出原始路径": "Local memory_entries.jsonl; case IDs are interface aliases and original paths are not exposed",
+  "修复后版本与医生原评分版本的对应关系尚待核实。": "The match between the post-restoration version and the version originally rated remains unverified.",
+  "对该影像独立评分 ↗": "Rate this image independently ↗",
+  "您已经查看过原标签，新评分会标记“已见参考标签”，不可作为盲评结果。": "You have seen the original labels. A new rating will be marked as reference-exposed and cannot be considered blinded.",
+  "把观察，变成可审计的判断。": "Make every observation auditable.",
+  "单图、单区域独立评分。先锁定观察，再参考先例。": "Rate one image and one region independently. Lock observations before consulting precedents.",
+  "↑ 上传自己的影像": "↑ Upload your image",
+  "观察并记录": "Observe & record",
+  "锁定并查证": "Lock & consult",
+  "保存待复核": "Save for review",
+  "合成示意 · 非临床影像": "Synthetic illustration · Not clinical",
+  "独立影像预览 · 非 DICOM 阅片器": "Independent image preview · Not a DICOM viewer",
+  "亮度": "Brightness",
+  "对比": "Contrast",
+  "对比度": "Contrast",
+  "缩放": "Zoom",
+  "重置": "Reset",
+  "显示调节仅影响预览，不修改原图；不提供 HU 窗宽窗位。": "Display adjustments affect the preview only. Original pixels are unchanged; HU windowing is not available.",
+  "结构化质量量表": "Structured quality rubric",
+  "每个区域 5 项 · 原始观察与修订分别保留": "5 items per region · Original observations and revisions retained separately",
+  "已锁定": "Locked",
+  "独立观察": "Independent observation",
+  "影像": "Image",
+  "选择评分影像": "Select image to rate",
+  "本地上传": "Local upload",
+  "时间点": "Time point",
+  "单图 / 未配对": "Single image / Unpaired",
+  "处理前（独立评分）": "Before restoration (independent)",
+  "处理后（独立评分）": "After restoration (independent)",
+  "✓ 原始观察已锁定。可保持原判定，或修改下方答案并填写修订依据；原始记录不会被覆盖。": "✓ Original observations are locked. Keep the judgments or revise them with a reason; the original record remains unchanged.",
+  "是": "Yes",
+  "否": "No",
+  "不确定": "Unresolved",
+  "记录可见证据（可选）…": "Describe visible evidence (optional)…",
+  "修订依据（更改任一标签或证据时必填）": "Revision reason (required when changing any label or evidence)",
+  "说明为何修订原始观察…": "Explain why you revised the original observation…",
+  "保存待复核记录 →": "Save for review →",
+  "锁定原始观察 →": "Lock observations →",
+  "“不确定”作为 null 保存，不计作 0 分。": "Unresolved is stored as null, not scored as 0.",
+  "已查看该影像参考标签，本次不属于盲评。": "Reference labels have been seen; this rating is not blinded.",
+  "未在此评分流程展示参考标签。": "Reference labels have not been shown in this scoring flow.",
+  "参考先例": "Reference precedents",
+  "按不同患者、不同折展示最多三例；不是向量相似度检索。": "Up to three examples from other patients and folds; not vector-similarity retrieval.",
+  "人工查阅": "Manual consultation",
+  "查看原始标签 ↗": "View original labels ↗",
+  "暂无符合隔离条件的先例。": "No precedents meet the isolation criteria.",
+  "参考先例将在观察锁定后出现。此页面不并排展示修复前后影像，也不自动输出改善结论。": "Precedents appear after observations are locked. Pre/post images are not shown side by side here, and no improvement conclusion is generated automatically.",
+  "开始新的评分？": "Start a new rating?",
+  "当前尚未保存的观察将被清空。已保存记录不受影响。": "Your unsaved observations will be cleared. Saved records are unaffected.",
+  "清空并继续": "Clear & continue",
+  "含不可判定": "Includes unresolved items",
+  "/ 5 分": "/ 5 points",
+  "/ 5 已作答": "/ 5 answered",
+  "请先完成当前区域的全部 5 项，包括不可判定项。": "Answer all 5 items for this region, using Unresolved where appropriate.",
+  "原始观察已锁定，现在可以查阅参考先例。": "Original observations locked. You can now consult precedents.",
+  "修订了原观察，请填写修订依据。": "Please give a reason for revising the original observation.",
+  "浏览器存储不可用，无法保存。请使用本地服务器并允许站点存储。": "Browser storage is unavailable. Use the local server and allow site storage to save.",
+  "已保存到当前浏览器，状态为待专家复核。": "Saved in this browser, pending expert review.",
+  "保存失败：浏览器存储空间不足或被禁用。": "Save failed: browser storage is full or disabled.",
+  "每一次判断，都留有来路。": "Keep a trace of every judgment.",
+  "保存原始观察、修订依据与标注时间；新增记录等待专家复核。": "Retain original observations, revision reasons and timestamps. New records await expert review.",
+  "↓ 导出全部 JSON": "↓ Export all JSON",
+  "待专家复核": "Pending expert review",
+  "演示影像": "Demo image",
+  "原库影像独立评分": "Independent rating of a library image",
+  "· 已见标签": "· Reference-exposed",
+  "查看记录": "View record",
+  "导出": "Export",
+  "删除": "Delete",
+  "还没有保存的评分": "No saved ratings yet",
+  "选择已有影像，或上传一张 PNG / JPEG，开始第一次独立观察。": "Select an existing image or upload a PNG / JPEG to start your first independent observation.",
+  "进入评分工作台 →": "Open scoring workspace →",
+  "上传 → 评分 → 待复核 → 专家证据": "Upload → Rate → Review queue → Expert evidence",
+  "当前原型支持前三步。正式审核、身份认证与入库需接入服务端。": "The prototype supports the first three steps. Formal review, identity verification and admission to the expert library require a backend.",
+  "已保存记录的影像": "Image attached to the saved record",
+  "原始": "Original",
+  "最终": "Final",
+  "最终证据": "Final evidence",
+  "未填写": "Not provided",
+  "保持原始观察": "Original observation retained",
+  "已查看参考标签，非盲评。": "Reference-exposed; not a blinded rating.",
+  "本次锁定前未在评分流程展示参考标签。": "No reference labels were shown in this scoring flow before locking.",
+  "↓ 导出完整记录": "↓ Export full record",
+  "是 / 1": "Yes / 1",
+  "否 / 0": "No / 0",
+  "已生成 JSON 导出。": "JSON export generated.",
+  "只支持 PNG / JPEG；DICOM 请先导出去标识化预览图。": "PNG / JPEG only. Export a de-identified preview before using DICOM data.",
+  "文件过大，请选择 20 MB 以内的影像。": "The file is too large. Choose an image of 20 MB or less.",
+  "无法解码影像或像素过大，请使用有效的 PNG / JPEG。": "The image cannot be decoded or exceeds the pixel limit. Use a valid PNG / JPEG.",
+  "影像已加载；保存评分后影像与记录将保存在本浏览器。": "Image loaded. Saving the rating will store the image and record in this browser.",
+  "删除这条本地评分？": "Delete this local rating?",
+  "删除后无法恢复。原始专家库不受影响；您也可以先导出保存。": "Deletion cannot be undone. The original expert library is unaffected. You can export the record first.",
+  "删除记录": "Delete record",
+  "本地评分已删除。": "Local rating deleted.",
+  "删除失败，请稍后再试。": "Deletion failed. Please try again.",
+  "本地已有模拟数据。同一参考切片、共享显示范围；不属于临床评分前后对照。": "Existing local simulations: the same reference slice and a shared display range. This is not a clinical pre/post rating comparison.",
+  "清洁参考切片": "Clean reference slice",
+  "金属退化模拟切片": "Simulated metal-degraded slice",
+  "来源：本地主池 simulation_pairs.csv；显示范围取 clean 的 1–99.5 百分位。不提供未经核实的金属分布统计或临床结论。": "Source: local main-pool simulation_pairs.csv. The display range uses the clean image's 1st–99.5th percentiles. No unverified metal distribution statistics or clinical conclusions are supplied.",
+  "本地存储不可用，仍可浏览，暂不能保存评分。": "Local storage is unavailable. Browsing is available, but ratings cannot be saved.",
+  "边缘锐利度": "Edge sharpness",
+  "冠部边缘是否清晰锐利": "Are the crown margins clearly defined?",
+  "几何形态": "Geometric shape",
+  "修复体形态是否完整可辨": "Is the restoration shape intact and recognizable?",
+  "接触 / 连接清晰度": "Contact / connector clarity",
+  "接触与连接结构是否清楚": "Are contact and connector structures clear?",
+  "边缘连续性": "Edge continuity",
+  "冠部边缘是否连续": "Are the crown margins continuous?",
+  "内部密度": "Internal density",
+  "内部密度表现是否清晰可评": "Is internal density clearly assessable?",
+  "轮廓完整性": "Contour integrity",
+  "邻牙轮廓是否完整": "Are adjacent tooth contours intact?",
+  "解剖可辨识性": "Anatomical recognizability",
+  "邻牙解剖结构是否可辨认": "Is adjacent tooth anatomy recognizable?",
+  "邻间隙清晰度": "Interproximal space clarity",
+  "邻间隙是否清楚": "Are interproximal spaces clear?",
+  "邻牙边缘是否清晰锐利": "Are adjacent tooth edges clearly defined?",
+  "釉牙本质界清晰度": "DEJ clarity",
+  "釉牙本质界是否可辨认": "Is the enamel–dentin junction recognizable?",
+  "合成牙弓示意图，非临床影像": "Synthetic dental arch illustration, not a clinical image",
+  "让每一项数据，都有明确的边界。": "Make the scope of every dataset explicit.",
+  "论文统计与本地清单是已有研究资产；演示案例和新评分不自动成为专家真值。": "Paper statistics and local manifests describe existing research assets. Demo cases and new ratings are not automatically expert ground truth.",
+  "模拟数据口径": "Simulation accounting",
+  "主池 7,119 对 / 1,187 病例，8 个来源并非 8 个独立临床中心。六类金属用于主池模拟。": "The main pool contains 7,119 pairs / 1,187 cases. Eight sources do not mean eight independent clinical centers. Six metal types are simulated in the main pool.",
+  "实际 simulation_summary.csv：主池 7,119＋扩展池 52,811＝59,930。论文文字将 59,930 描述为扩展池，两者有口径差异；此页面采用实际清单口径。": "Actual simulation_summary.csv: main 7,119 + extension 52,811 = 59,930. The manuscript describes 59,930 as the extended pool. This page follows the actual manifest and discloses the discrepancy.",
+  "专家标注口径": "Expert annotation accounting",
+  "A295：26 个病例、295 张单图，双专家独立评分。B135：27 个病例、135 个位置，单份分项标签；测试子集 105 对来自 21 位患者。": "A295: 26 cases, 295 single images, independently rated by two experts. B135: 27 cases, 135 positions, one set of item labels. The test subset has 105 pairs from 21 patients.",
+  "430 条先例仅包含 A295 与 B 处理前135条。B 无双评分者，不能计算其专家间一致性。": "The 430 precedents contain only A295 and 135 pre-restoration B entries. B has no second rater, so inter-rater agreement cannot be computed.",
+  "观察锁定与检索": "Observation locking & retrieval",
+  "先记录观察，再锁定，再查先例。当前页面提供人工评分和先例浏览，不运行 VLM 推理或向量检索。": "Record observations, lock them, then consult precedents. This interface supports manual ratings and browsing, without VLM inference or vector retrieval.",
+  "量表留一检索仅排除查询对，可含同患者邻层。规模实验检索排除同患者、同折，Top-3 来自三个不同患者。": "Rubric leave-one-out retrieval excludes only the query pair and may retain same-patient neighboring slices. Evidence-scale retrieval excludes the same patient and fold, with three neighbors from distinct patients.",
+  "评分边界": "Rating scope",
+  "5 项冠部＋5 项邻域，按区域与时间点独立评分。不可判定保留为 null；不当作否或零分。原始库没有专家文字解释，不补写虚构解释。": "Five crown items and five adjacent-region items are rated independently by region and time point. Unresolved stays null, never No or zero. Missing expert narratives are not fabricated.",
+  "量表与临床条款有四处非完全映射：冠内密度、邻域解剖、邻间隙、邻域锐利度。完整定义以研究协议为准。": "Four rubric-to-standard mappings are imperfect: crown density, adjacent anatomy, interproximal space and adjacent edge sharpness. The research protocol defines the full scope.",
+  "来源：CVPR2027/sec/3_dataset.tex、sec/4_methodology.tex、tables/tab1_datasets.tex；e-data/prepared/simulation_summary.csv、memory_entries.jsonl。仅本地读取，不发送至第三方。": "Sources: CVPR2027/sec/3_dataset.tex, sec/4_methodology.tex, tables/tab1_datasets.tex; e-data/prepared/simulation_summary.csv and memory_entries.jsonl. Read locally; nothing is sent to third parties."
+};
+const ZH_DECORATIVE={
+ 'RESEARCH WORKSPACE':'研究工作空间','CBCT EVIDENCE LAB':'CBCT 证据实验室',
+ 'FROM SIMULATION TO EVIDENCE':'从模拟到证据','6 METAL TYPES':'6 类金属','8 DATA SOURCES':'8 个数据来源','TRACEABLE EVIDENCE ↗':'可追溯证据 ↗',
+ '01 / SIMULATION ATLAS':'01 / 模拟数据图谱','02 / CBCT SCORING':'02 / CBCT 评分','03 / EXPERT EVIDENCE':'03 / 专家证据库','04 / ANNOTATION LOG':'04 / 标注记录',
+ 'YOUR FIRST OBSERVATION':'第一次独立观察','PROVENANCE & PROTOCOL':'数据来源与研究协议','IMMUTABLE OBSERVATION':'已锁定的原始观察',
+ 'RUBRIC EVALUATION':'量表评价','EVIDENCE SCALE':'证据规模','MANIFEST':'数据清单',
+ 'Clean reference':'清洁参考','Metal-affected':'金属退化',
+ 'AgentMAR / Research prototype':'AgentMAR / 研究原型','AgentMAR · Anatomy-aware evaluation':'AgentMAR · 解剖感知评价'
+};
+let uiLanguage='en';
+try{if(localStorage.getItem('agentmar-language')==='zh')uiLanguage='zh'}catch{}
+const copyCache=new WeakMap(), attributeCache=new WeakMap();
+const observedAttributes=['placeholder','title','aria-label','alt'];
+function englishCopy(source){
+ if(Object.prototype.hasOwnProperty.call(EN_COPY,source))return EN_COPY[source];
+ let match;
+ if((match=source.match(/^当前 (\d+) 个来源 · ([\d,]+) 病例 · ([\d,]+) 图像对$/)))return `${match[1]} sources · ${match[2]} cases · ${match[3]} pairs`;
+ if((match=source.match(/^当前浏览器本地保存 (\d+) 条记录。未连接账户或服务器，不同步到其他设备；本地标注者身份未认证。上传图像保存在 IndexedDB，导出 JSON 不包含图像。$/)))return `${match[1]} records stored in this browser. No account or server sync; the local annotator is unverified. Uploaded images are stored in IndexedDB and are not included in JSON exports.`;
+ if((match=source.match(/^(\d+) \/ (\d+) · (\d+) 条$/)))return `${match[1]} / ${match[2]} · ${match[3]} records`;
+ if((match=source.match(/^(\d+) 项原始标签$/)))return `${match[1]} original item labels`;
+ if((match=source.match(/^原始观察锁定于 (.+)。当前状态：待专家复核。$/)))return `Original observations locked at ${match[1]}. Status: pending expert review.`;
+ if((match=source.match(/^(.*)观察依据$/)))return `${englishCopy(match[1])}: observation evidence`;
+ if((match=source.match(/^(.*)真实模拟切片$/)))return `${englishCopy(match[1])}: actual simulated slice`;
+ if((match=source.match(/^(.*) · 配对模拟样本$/)))return `${englishCopy(match[1])} · Paired simulation sample`;
+ if((match=source.match(/^(.*) CBCT 预览$/)))return `${match[1]} CBCT preview`;
+ if((match=source.match(/^(\d+)　(.+)$/)))return `${match[1]}  ${englishCopy(match[2])}`;
+ if((match=source.match(/^(.+) \/ (局部高密度填充物引起的条纹与暗带。|多点托槽带来的复杂金属分布。|冠体周围的边缘与密度可辨识性。|复合金属分布下的交叉条纹。|桩核及邻近牙体的结构可见性。|种植体邻近组织与骨边界的可辨识性。)(.*)$/))){
+ const descriptions=['Streaks and dark bands from dense local fillings.','Complex metal distributions from multiple brackets.','Visibility of margins and density around crowns.','Crossing streaks from combined metal distributions.','Visibility of the post/core and surrounding tooth structure.','Visibility of adjacent tissue and bone boundaries around implants.'];
+ const originals=['局部高密度填充物引起的条纹与暗带。','多点托槽带来的复杂金属分布。','冠体周围的边缘与密度可辨识性。','复合金属分布下的交叉条纹。','桩核及邻近牙体的结构可见性。','种植体邻近组织与骨边界的可辨识性。'];
+ return englishCopy(match[1])+' / '+descriptions[originals.indexOf(match[2])]+' '+(match[3].includes('本地主池')?'Actual local main-pool preview with a shared reference-percentile display range; not clinical HU viewing.':'Synthetic interface illustration. No per-metal distribution is inferred.');
+ }
+ // Dynamic IDs, dates and cohort codes are preserved; only known UI fragments change.
+ const fragments=[['冠部 / 邻域','Crown / Adjacent'],['冠部','Crown'],['邻域','Adjacent'],[' 队列',' cohort'],['队列 ','Cohort '],[' · 本地上传',' · Local upload'],[' · 演示影像',' · Demo image'],[' · 原库影像独立评分',' · Independent library-image rating'],[' · 已见标签',' · Reference-exposed'],['修订依据：','Revision reason: '],['来源：','Source: '],['。此处不生成或补写专家解释。','. Expert narratives are not generated or fabricated here.'],['原始资料未包含专家文字解释','No expert narrative was provided in the source'],['演示条目，无真实专家文字说明','Demo entry; no authentic expert narrative'],['保持原始观察','Original observation retained']];
+ let output=source;for(const [zh,en] of fragments)output=output.split(zh).join(en);
+ for(const [zh,en] of Object.entries(EN_COPY).filter(([key])=>key.length>=8).sort((a,b)=>b[0].length-a[0].length))output=output.split(zh).join(en);
+ return output.replaceAll('。','. ').replaceAll('；','; ');
+}
+function translated(source){const text=source.trim();const result=uiLanguage==='en'?englishCopy(text):(ZH_DECORATIVE[text]||text);return source.replace(text,result)}
+function localize(root=document.body){
+ const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let node;
+ while((node=walker.nextNode())){
+  const parent=node.parentElement;
+  if(!parent||parent.closest('script,style,textarea,[data-user-content],.language-switch'))continue;
+  const previous=copyCache.get(node),source=previous&&node.nodeValue===previous.rendered?previous.source:node.nodeValue;
+  if(!source.trim())continue;
+  const rendered=translated(source);if(node.nodeValue!==rendered)node.nodeValue=rendered;
+  copyCache.set(node,{source,rendered});
+ }
+ root.querySelectorAll('[placeholder],[title],[aria-label],[alt]').forEach(el=>{
+  if(el.closest('[data-user-content],.language-switch'))return;
+  const previous=attributeCache.get(el)||{};
+  for(const name of observedAttributes){if(!el.hasAttribute(name))continue;
+   const actual=el.getAttribute(name),cached=previous[name],source=cached&&actual===cached.rendered?cached.source:actual;
+   const rendered=translated(source);if(actual!==rendered)el.setAttribute(name,rendered);previous[name]={source,rendered};
+  }attributeCache.set(el,previous);
+ });
+ document.documentElement.lang=uiLanguage==='en'?'en':'zh-CN';
+ document.title=uiLanguage==='en'?'AgentMAR · CBCT Evidence Lab':'AgentMAR · CBCT 证据实验室';
+ document.querySelector('meta[name="description"]').content=uiLanguage==='en'?EN_COPY['AgentMAR CBCT 多中心模拟数据与专家证据工作台']:'AgentMAR CBCT 多中心模拟数据与专家证据工作台';
+ document.querySelectorAll('[data-language]').forEach(button=>{button.setAttribute('aria-pressed',String(button.dataset.language===uiLanguage));button.classList.toggle('active',button.dataset.language===uiLanguage)});
+}
+// Localize after rendering without replacing DOM elements, form values or handlers.
+// This also keeps an open dialog, the selected image and frozen observations intact.
+for(const name of ['render','drawSources','drawMetal','drawCases','drawScoreSummary','scoreView','recordsView','openDialog','toast']){
+ const original=window[name];window[name]=function(...args){const result=original.apply(this,args);localize();return result};
+}
+document.querySelectorAll('[data-language]').forEach(button=>button.addEventListener('click',()=>{
+ uiLanguage=button.dataset.language;try{localStorage.setItem('agentmar-language',uiLanguage)}catch{}
+ localize();
+}));
+localize();
