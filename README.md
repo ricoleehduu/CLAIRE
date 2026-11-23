@@ -5,8 +5,9 @@
 A static research showcase for anatomy-aware dental CBCT evaluation.
 
 - Same-slice before/after slider with three simulated metal configurations and two restoration methods.
+- Publication Evidence Lab on real public CBCT slices: 18 ToothFairy3 cases plus six clean/degraded metal pairs, with explicit "no expert labels" state.
 - Interactive observe → lock → consult → audit walkthrough.
-- Reused Evidence Lab with bilingual UI and browser-local annotation records.
+- Bilingual UI with browser-local annotation records.
 
 ## Run locally
 
@@ -20,9 +21,9 @@ No build dependencies. GitHub Pages publishes the `main` branch root.
 
 The displayed slices derive from the public ToothFairy3 corpus. Simulated metal inputs and AMIFound/HorusEye outputs share the same slice geometry and fixed stored-intensity display window (−1024 to 3072); this is not a claim of calibrated HU. Asset provenance is in `assets/examples.json`.
 
-Reference cards in the walkthrough and static Evidence Lab are explicitly synthetic teaching examples, not expert ground truth or live retrieval. The website does not run restoration models. Visitor annotations remain in the browser; exported JSON is not expert validation. Research demonstration only, not a diagnostic device.
+Reference cards in the walkthrough are explicitly synthetic teaching examples, not expert ground truth or live retrieval. The Evidence Lab's 18 library cards and six metal cards are real public ToothFairy3 slices rendered by `tools/build_lab_media.py` (see [lab/ATTRIBUTION.txt](lab/ATTRIBUTION.txt)); each library card is labelled "public reference · real slice" and carries no expert item labels. The website does not run restoration models. Visitor annotations remain in the browser; exported JSON is not expert validation. Research demonstration only, not a diagnostic device.
 
-The website reports coverage separately from agreement and BF1 deterioration separately from joint SSIM–BF1 conflicts. Clinical hospital images, patient records, credentials, and manuscript PDFs are not part of this repository.
+The website reports coverage separately from agreement and BF1 deterioration separately from joint SSIM–BF1 conflicts. Clinical hospital images, patient records, credentials, and manuscript PDFs are not part of this repository: the Evidence Lab ships only ToothFairy3 public-source slices, and the 430-entry clinical expert library stays local-only.
 
 ## 3D reference anatomy gallery
 

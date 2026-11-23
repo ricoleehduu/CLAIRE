@@ -1,0 +1,46 @@
+{
+ "metals": [
+  "amalgam",
+  "bracket",
+  "crown",
+  "crown+amalgam",
+  "postcore",
+  "implant"
+ ],
+ "labels": {
+  "amalgam": "银汞合金",
+  "bracket": "正畸托槽",
+  "crown": "牙冠",
+  "crown+amalgam": "牙冠＋银汞",
+  "postcore": "桩核",
+  "implant": "种植体"
+ },
+ "images": {
+  "amalgam": {
+   "clean": "sim/amalgam-clean.webp",
+   "degraded": "sim/amalgam-degraded.webp"
+  },
+  "bracket": {
+   "clean": "sim/bracket-clean.webp",
+   "degraded": "sim/bracket-degraded.webp"
+  },
+  "crown": {
+   "clean": "sim/crown-clean.webp",
+   "degraded": "sim/crown-degraded.webp"
+  },
+  "crown+amalgam": {
+   "clean": "sim/crown+amalgam-clean.webp",
+   "degraded": "sim/crown+amalgam-degraded.webp"
+  },
+  "postcore": {
+   "clean": "sim/postcore-clean.webp",
+   "degraded": "sim/postcore-degraded.webp"
+  },
+  "implant": {
+   "clean": "sim/implant-clean.webp",
+   "degraded": "sim/implant-degraded.webp"
+  }
+ },
+ "display": "shared clean percentile 1-99.5",
+ "source": "ToothFairy3 main pool"
+}

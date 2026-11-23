@@ -1,0 +1,14 @@
+Public-source slices in this folder
+===================================
+
+All images are derived from ToothFairy3 CBCT volumes (public corpus, CC BY-NC-SA 4.0).
+Each slice is a real reference CBCT slice; the metal insertion is a simulation produced by
+the CLAIRE pipeline and is not a clinical acquisition.
+
+- Crops are fixed per case; clean and degraded share one display window taken from the
+  clean slice at percentiles 1-99.5. This is a stored-intensity window, not calibrated HU.
+- Case identifiers are display aliases; source volumes and paths are not published.
+- No hospital or clinical cohort images are included. Those remain local-only.
+
+Reference: Bolelli et al., ToothFairy3 challenge (MICCAI 2025); see the project page
+anatomy-v2/ATTRIBUTION.txt for the full citation set.

@@ -1,0 +1,369 @@
+{
+ "mode": "public",
+ "total": 18,
+ "patients": 18,
+ "source": "ToothFairy3 main simulation pool (public corpus); rendered from e-data/prepared/simulation_pairs.csv",
+ "display": "clean percentile 1-99.5 shared per pair; slice crop fixed",
+ "entries": [
+  {
+   "id": "PUB-001",
+   "patient": "P001",
+   "cohort": "public",
+   "fold": 1,
+   "tasks": [
+    "crown"
+   ],
+   "region": "crown",
+   "metal": "amalgam",
+   "metalLabel": "银汞合金",
+   "image": "cases/PUB-001-degraded.webp",
+   "pairImage": "cases/PUB-001-clean.webp",
+   "timepoint": "public_reference",
+   "sliceIndex": 62,
+   "ratings": [],
+   "isDemo": false,
+   "isPublic": true,
+   "narrative": "公开来源真实切片；原始清单不含该切片的专家分项标签"
+  },
+  {
+   "id": "PUB-002",
+   "patient": "P002",
+   "cohort": "public",
+   "fold": 2,
+   "tasks": [
+    "adjacent"
+   ],
+   "region": "adjacent",
+   "metal": "amalgam",
+   "metalLabel": "银汞合金",
+   "image": "cases/PUB-002-degraded.webp",
+   "pairImage": "cases/PUB-002-clean.webp",
+   "timepoint": "public_reference",
+   "sliceIndex": 97,
+   "ratings": [],
+   "isDemo": false,
+   "isPublic": true,
+   "narrative": "公开来源真实切片；原始清单不含该切片的专家分项标签"
+  },
+  {
+   "id": "PUB-003",
+   "patient": "P003",
+   "cohort": "public",
+   "fold": 3,
+   "tasks": [
+    "crown"
+   ],
+   "region": "crown",
+   "metal": "amalgam",
+   "metalLabel": "银汞合金",
+   "image": "cases/PUB-003-degraded.webp",
+   "pairImage": "cases/PUB-003-clean.webp",
+   "timepoint": "public_reference",
+   "sliceIndex": 41,
+   "ratings": [],
+   "isDemo": false,
+   "isPublic": true,
+   "narrative": "公开来源真实切片；原始清单不含该切片的专家分项标签"
+  },
+  {
+   "id": "PUB-004",
+   "patient": "P004",
+   "cohort": "public",
+   "fold": 4,
+   "tasks": [
+    "adjacent"
+   ],
+   "region": "adjacent",
+   "metal": "bracket",
+   "metalLabel": "正畸托槽",
+   "image": "cases/PUB-004-degraded.webp",
+   "pairImage": "cases/PUB-004-clean.webp",
+   "timepoint": "public_reference",
+   "sliceIndex": 51,
+   "ratings": [],
+   "isDemo": false,
+   "isPublic": true,
+   "narrative": "公开来源真实切片；原始清单不含该切片的专家分项标签"
+  },
+  {
+   "id": "PUB-005",
+   "patient": "P005",
+   "cohort": "public",
+   "fold": 0,
+   "tasks": [
+    "crown"
+   ],
+   "region": "crown",
+   "metal": "bracket",
+   "metalLabel": "正畸托槽",
+   "image": "cases/PUB-005-degraded.webp",
+   "pairImage": "cases/PUB-005-clean.webp",
+   "timepoint": "public_reference",
+   "sliceIndex": 34,
+   "ratings": [],
+   "isDemo": false,
+   "isPublic": true,
+   "narrative": "公开来源真实切片；原始清单不含该切片的专家分项标签"
+  },
+  {
+   "id": "PUB-006",
+   "patient": "P006",
+   "cohort": "public",
+   "fold": 1,
+   "tasks": [
+    "adjacent"
+   ],
+   "region": "adjacent",
+   "metal": "bracket",
+   "metalLabel": "正畸托槽",
+   "image": "cases/PUB-006-degraded.webp",
+   "pairImage": "cases/PUB-006-clean.webp",
+   "timepoint": "public_reference",
+   "sliceIndex": 58,
+   "ratings": [],
+   "isDemo": false,
+   "isPublic": true,
+   "narrative": "公开来源真实切片；原始清单不含该切片的专家分项标签"
+  },
+  {
+   "id": "PUB-007",
+   "patient": "P007",
+   "cohort": "public",
+   "fold": 2,
+   "tasks": [
+    "crown"
+   ],
+   "region": "crown",
+   "metal": "crown",
+   "metalLabel": "牙冠",
+   "image": "cases/PUB-007-degraded.webp",
+   "pairImage": "cases/PUB-007-clean.webp",
+   "timepoint": "public_reference",
+   "sliceIndex": 66,
+   "ratings": [],
+   "isDemo": false,
+   "isPublic": true,
+   "narrative": "公开来源真实切片；原始清单不含该切片的专家分项标签"
+  },
+  {
+   "id": "PUB-008",
+   "patient": "P008",
+   "cohort": "public",
+   "fold": 3,
+   "tasks": [
+    "adjacent"
+   ],
+   "region": "adjacent",
+   "metal": "crown",
+   "metalLabel": "牙冠",
+   "image": "cases/PUB-008-degraded.webp",
+   "pairImage": "cases/PUB-008-clean.webp",
+   "timepoint": "public_reference",
+   "sliceIndex": 89,
+   "ratings": [],
+   "isDemo": false,
+   "isPublic": true,
+   "narrative": "公开来源真实切片；原始清单不含该切片的专家分项标签"
+  },
+  {
+   "id": "PUB-009",
+   "patient": "P009",
+   "cohort": "public",
+   "fold": 4,
+   "tasks": [
+    "crown"
+   ],
+   "region": "crown",
+   "metal": "crown",
+   "metalLabel": "牙冠",
+   "image": "cases/PUB-009-degraded.webp",
+   "pairImage": "cases/PUB-009-clean.webp",
+   "timepoint": "public_reference",
+   "sliceIndex": 64,
+   "ratings": [],
+   "isDemo": false,
+   "isPublic": true,
+   "narrative": "公开来源真实切片；原始清单不含该切片的专家分项标签"
+  },
+  {
+   "id": "PUB-010",
+   "patient": "P010",
+   "cohort": "public",
+   "fold": 0,
+   "tasks": [
+    "adjacent"
+   ],
+   "region": "adjacent",
+   "metal": "crown+amalgam",
+   "metalLabel": "牙冠＋银汞",
+   "image": "cases/PUB-010-degraded.webp",
+   "pairImage": "cases/PUB-010-clean.webp",
+   "timepoint": "public_reference",
+   "sliceIndex": 37,
+   "ratings": [],
+   "isDemo": false,
+   "isPublic": true,
+   "narrative": "公开来源真实切片；原始清单不含该切片的专家分项标签"
+  },
+  {
+   "id": "PUB-011",
+   "patient": "P011",
+   "cohort": "public",
+   "fold": 1,
+   "tasks": [
+    "crown"
+   ],
+   "region": "crown",
+   "metal": "crown+amalgam",
+   "metalLabel": "牙冠＋银汞",
+   "image": "cases/PUB-011-degraded.webp",
+   "pairImage": "cases/PUB-011-clean.webp",
+   "timepoint": "public_reference",
+   "sliceIndex": 66,
+   "ratings": [],
+   "isDemo": false,
+   "isPublic": true,
+   "narrative": "公开来源真实切片；原始清单不含该切片的专家分项标签"
+  },
+  {
+   "id": "PUB-012",
+   "patient": "P012",
+   "cohort": "public",
+   "fold": 2,
+   "tasks": [
+    "adjacent"
+   ],
+   "region": "adjacent",
+   "metal": "crown+amalgam",
+   "metalLabel": "牙冠＋银汞",
+   "image": "cases/PUB-012-degraded.webp",
+   "pairImage": "cases/PUB-012-clean.webp",
+   "timepoint": "public_reference",
+   "sliceIndex": 72,
+   "ratings": [],
+   "isDemo": false,
+   "isPublic": true,
+   "narrative": "公开来源真实切片；原始清单不含该切片的专家分项标签"
+  },
+  {
+   "id": "PUB-013",
+   "patient": "P013",
+   "cohort": "public",
+   "fold": 3,
+   "tasks": [
+    "crown"
+   ],
+   "region": "crown",
+   "metal": "postcore",
+   "metalLabel": "桩核",
+   "image": "cases/PUB-013-degraded.webp",
+   "pairImage": "cases/PUB-013-clean.webp",
+   "timepoint": "public_reference",
+   "sliceIndex": 44,
+   "ratings": [],
+   "isDemo": false,
+   "isPublic": true,
+   "narrative": "公开来源真实切片；原始清单不含该切片的专家分项标签"
+  },
+  {
+   "id": "PUB-014",
+   "patient": "P014",
+   "cohort": "public",
+   "fold": 4,
+   "tasks": [
+    "adjacent"
+   ],
+   "region": "adjacent",
+   "metal": "postcore",
+   "metalLabel": "桩核",
+   "image": "cases/PUB-014-degraded.webp",
+   "pairImage": "cases/PUB-014-clean.webp",
+   "timepoint": "public_reference",
+   "sliceIndex": 45,
+   "ratings": [],
+   "isDemo": false,
+   "isPublic": true,
+   "narrative": "公开来源真实切片；原始清单不含该切片的专家分项标签"
+  },
+  {
+   "id": "PUB-015",
+   "patient": "P015",
+   "cohort": "public",
+   "fold": 0,
+   "tasks": [
+    "crown"
+   ],
+   "region": "crown",
+   "metal": "postcore",
+   "metalLabel": "桩核",
+   "image": "cases/PUB-015-degraded.webp",
+   "pairImage": "cases/PUB-015-clean.webp",
+   "timepoint": "public_reference",
+   "sliceIndex": 59,
+   "ratings": [],
+   "isDemo": false,
+   "isPublic": true,
+   "narrative": "公开来源真实切片；原始清单不含该切片的专家分项标签"
+  },
+  {
+   "id": "PUB-016",
+   "patient": "P016",
+   "cohort": "public",
+   "fold": 1,
+   "tasks": [
+    "adjacent"
+   ],
+   "region": "adjacent",
+   "metal": "implant",
+   "metalLabel": "种植体",
+   "image": "cases/PUB-016-degraded.webp",
+   "pairImage": "cases/PUB-016-clean.webp",
+   "timepoint": "public_reference",
+   "sliceIndex": 64,
+   "ratings": [],
+   "isDemo": false,
+   "isPublic": true,
+   "narrative": "公开来源真实切片；原始清单不含该切片的专家分项标签"
+  },
+  {
+   "id": "PUB-017",
+   "patient": "P017",
+   "cohort": "public",
+   "fold": 2,
+   "tasks": [
+    "crown"
+   ],
+   "region": "crown",
+   "metal": "implant",
+   "metalLabel": "种植体",
+   "image": "cases/PUB-017-degraded.webp",
+   "pairImage": "cases/PUB-017-clean.webp",
+   "timepoint": "public_reference",
+   "sliceIndex": 47,
+   "ratings": [],
+   "isDemo": false,
+   "isPublic": true,
+   "narrative": "公开来源真实切片；原始清单不含该切片的专家分项标签"
+  },
+  {
+   "id": "PUB-018",
+   "patient": "P018",
+   "cohort": "public",
+   "fold": 3,
+   "tasks": [
+    "adjacent"
+   ],
+   "region": "adjacent",
+   "metal": "implant",
+   "metalLabel": "种植体",
+   "image": "cases/PUB-018-degraded.webp",
+   "pairImage": "cases/PUB-018-clean.webp",
+   "timepoint": "public_reference",
+   "sliceIndex": 51,
+   "ratings": [],
+   "isDemo": false,
+   "isPublic": true,
+   "narrative": "公开来源真实切片；原始清单不含该切片的专家分项标签"
+  }
+ ]
+}

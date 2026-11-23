@@ -1,6 +1,27 @@
 'use strict';
 // UI copy only. Annotation values and user-authored evidence are never translated.
 const EN_COPY={
+  "公开真实影像": "Public real data",
+  "全部金属": "All metals",
+  "公开参考 · 真实切片": "Public reference · real slice",
+  "仅影像 · 无专家标签": "Image only · no expert labels",
+  "查看影像 ↗": "View image ↗",
+  "公开来源真实切片": "Public-source real slice",
+  "真实切片 · 无专家标签": "Real slice · no expert labels",
+  "ToothFairy3 公开来源": "ToothFairy3 public corpus",
+  "ToothFairy3 公开来源 · 无专家标签": "ToothFairy3 public corpus · no expert labels",
+  "公开来源 ToothFairy3 真实切片 · 清单无专家分项标签": "Real ToothFairy3 public slices · the manifest has no expert item labels",
+  "PUBLIC / 公开影像": "PUBLIC",
+  "公开真实 CBCT · ToothFairy3 切片 ＋ 模拟金属": "Real public CBCT · ToothFairy3 slices + simulated metal",
+  "点击探索 · 公开真实切片 ＋ 模拟金属": "Click to explore · real public slices + simulated metal",
+  "公开来源真实 CBCT 切片，叠加模拟金属": "Real CBCT slice from a public corpus with simulated metal",
+  "此切片没有专家分项标签；此页只展示公开来源的真实影像。": "This slice has no expert item labels; only the public-source image is shown.",
+  "清单不带专家标签，本站不补写评分。": "The manifest has no expert labels and no ratings are fabricated here.",
+  "同一层面的干净参考切片": "Clean reference at the same slice position",
+  "同一层面的金属伪影模拟切片": "Metal-affected simulation at the same slice position",
+  "ToothFairy3 公开主池；金属为研究流程模拟插入，非临床采集": "ToothFairy3 public main pool; metal is simulated by the research pipeline, not acquired clinically",
+  "公开来源真实切片；原始清单不含该切片的专家分项标签": "Public-source real slice; the manifest has no expert item labels for this slice",
+  "公开来源切片": "Public-source slice",
   "工作空间": "Workspace",
   "主导航": "Main navigation",
   "数据图谱": "Data atlas",
@@ -301,6 +322,8 @@ const observedAttributes=['placeholder','title','aria-label','alt'];
 function englishCopy(source){
  if(Object.prototype.hasOwnProperty.call(EN_COPY,source))return EN_COPY[source];
  let match;
+ if((match=source.match(/^(银汞合金|正畸托槽|牙冠＋银汞|牙冠|桩核|种植体) · (P\d{3,})$/)))return `${EN_COPY[match[1]]} · ${match[2]}`;
+ if((match=source.match(/^(PUB-\d+) · (银汞合金|正畸托槽|牙冠＋银汞|牙冠|桩核|种植体)$/)))return `${match[1]} · ${EN_COPY[match[2]]}`;
  if((match=source.match(/^当前 (\d+) 个来源 · ([\d,]+) 病例 · ([\d,]+) 图像对$/)))return `${match[1]} sources · ${match[2]} cases · ${match[3]} pairs`;
  if((match=source.match(/^当前浏览器本地保存 (\d+) 条记录。未连接账户或服务器，不同步到其他设备；本地标注者身份未认证。上传图像保存在 IndexedDB，导出 JSON 不包含图像。$/)))return `${match[1]} records stored in this browser. No account or server sync; the local annotator is unverified. Uploaded images are stored in IndexedDB and are not included in JSON exports.`;
  if((match=source.match(/^(\d+) \/ (\d+) · (\d+) 条$/)))return `${match[1]} / ${match[2]} · ${match[3]} records`;
