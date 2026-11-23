@@ -1,0 +1,274 @@
+[
+  {
+    "id": "ToothFairy3F_001",
+    "subset": "ToothFairy3",
+    "title": "TF3 F_001",
+    "file": "ToothFairy3F_001.glb",
+    "groups": [
+      "airway",
+      "canals",
+      "jaws",
+      "pulp",
+      "restorations",
+      "sinuses",
+      "teeth"
+    ],
+    "counts": {
+      "jaws": 2,
+      "canals": 5,
+      "sinuses": 2,
+      "airway": 1,
+      "restorations": 3,
+      "teeth": 22,
+      "pulp": 17
+    },
+    "source": "ToothFairy3",
+    "annotation": "Reference segmentation surface",
+    "license": "CC BY-NC-SA 4.0",
+    "frontSign": 1,
+    "orientation": "Upper dentition above lower dentition; label-verified",
+    "orientationCorrected": true
+  },
+  {
+    "id": "ToothFairy3F_002",
+    "subset": "ToothFairy3",
+    "title": "TF3 F_002",
+    "file": "ToothFairy3F_002.glb",
+    "groups": [
+      "airway",
+      "canals",
+      "jaws",
+      "pulp",
+      "restorations",
+      "sinuses",
+      "teeth"
+    ],
+    "counts": {
+      "jaws": 2,
+      "canals": 5,
+      "sinuses": 2,
+      "airway": 1,
+      "restorations": 2,
+      "teeth": 22,
+      "pulp": 21
+    },
+    "source": "ToothFairy3",
+    "annotation": "Reference segmentation surface",
+    "license": "CC BY-NC-SA 4.0",
+    "frontSign": 1,
+    "orientation": "Upper dentition above lower dentition; label-verified",
+    "orientationCorrected": true
+  },
+  {
+    "id": "ToothFairy3F_003",
+    "subset": "ToothFairy3",
+    "title": "TF3 F_003",
+    "file": "ToothFairy3F_003.glb",
+    "groups": [
+      "airway",
+      "canals",
+      "jaws",
+      "pulp",
+      "restorations",
+      "sinuses",
+      "teeth"
+    ],
+    "counts": {
+      "jaws": 2,
+      "canals": 5,
+      "sinuses": 2,
+      "airway": 1,
+      "restorations": 2,
+      "teeth": 19,
+      "pulp": 17
+    },
+    "source": "ToothFairy3",
+    "annotation": "Reference segmentation surface",
+    "license": "CC BY-NC-SA 4.0",
+    "frontSign": 1,
+    "orientation": "Upper dentition above lower dentition; label-verified",
+    "orientationCorrected": true
+  },
+  {
+    "id": "ToothFairy3F_004",
+    "subset": "ToothFairy3",
+    "title": "TF3 F_004",
+    "file": "ToothFairy3F_004.glb",
+    "groups": [
+      "airway",
+      "canals",
+      "jaws",
+      "pulp",
+      "restorations",
+      "sinuses",
+      "teeth"
+    ],
+    "counts": {
+      "jaws": 2,
+      "canals": 5,
+      "sinuses": 2,
+      "airway": 1,
+      "restorations": 2,
+      "teeth": 25,
+      "pulp": 25
+    },
+    "source": "ToothFairy3",
+    "annotation": "Reference segmentation surface",
+    "license": "CC BY-NC-SA 4.0",
+    "frontSign": 1,
+    "orientation": "Upper dentition above lower dentition; label-verified",
+    "orientationCorrected": true
+  },
+  {
+    "id": "STS24_Train_Labeled_0001",
+    "subset": "STS24",
+    "title": "STS24 \u00b7 0001",
+    "file": "STS24_Train_Labeled_0001.glb",
+    "groups": [
+      "teeth"
+    ],
+    "counts": {
+      "teeth": 8
+    },
+    "source": "STS24",
+    "annotation": "Reference segmentation surface",
+    "license": "Source dataset terms",
+    "frontSign": -1,
+    "orientation": "Upper dentition above lower dentition; label-verified",
+    "orientationCorrected": false
+  },
+  {
+    "id": "STS24_Train_Labeled_0002",
+    "subset": "STS24",
+    "title": "STS24 \u00b7 0002",
+    "file": "STS24_Train_Labeled_0002.glb",
+    "groups": [
+      "teeth"
+    ],
+    "counts": {
+      "teeth": 13
+    },
+    "source": "STS24",
+    "annotation": "Reference segmentation surface",
+    "license": "Source dataset terms",
+    "frontSign": -1,
+    "orientation": "Upper dentition above lower dentition; label-verified",
+    "orientationCorrected": false
+  },
+  {
+    "id": "STS24_Train_Labeled_0003",
+    "subset": "STS24",
+    "title": "STS24 \u00b7 0003",
+    "file": "STS24_Train_Labeled_0003.glb",
+    "groups": [
+      "teeth"
+    ],
+    "counts": {
+      "teeth": 10
+    },
+    "source": "STS24",
+    "annotation": "Reference segmentation surface",
+    "license": "Source dataset terms",
+    "frontSign": -1,
+    "orientation": "Upper dentition above lower dentition; label-verified",
+    "orientationCorrected": false
+  },
+  {
+    "id": "STS24_Train_Labeled_0004",
+    "subset": "STS24",
+    "title": "STS24 \u00b7 0004",
+    "file": "STS24_Train_Labeled_0004.glb",
+    "groups": [
+      "teeth"
+    ],
+    "counts": {
+      "teeth": 32
+    },
+    "source": "STS24",
+    "annotation": "Reference segmentation surface",
+    "license": "Source dataset terms",
+    "frontSign": -1,
+    "orientation": "Upper dentition above lower dentition; label-verified",
+    "orientationCorrected": false
+  },
+  {
+    "id": "STS25_Train_Labeled_0011",
+    "subset": "STS25",
+    "title": "STS25 \u00b7 0011",
+    "file": "STS25_Train_Labeled_0011.glb",
+    "groups": [
+      "pulp",
+      "teeth"
+    ],
+    "counts": {
+      "teeth": 2,
+      "pulp": 7
+    },
+    "source": "STS25",
+    "annotation": "Reference segmentation surface",
+    "license": "Source dataset terms",
+    "frontSign": -1,
+    "orientation": "Upper dentition above lower dentition; label-verified",
+    "orientationCorrected": false
+  },
+  {
+    "id": "STS25_Train_Labeled_0012",
+    "subset": "STS25",
+    "title": "STS25 \u00b7 0012",
+    "file": "STS25_Train_Labeled_0012.glb",
+    "groups": [
+      "pulp",
+      "teeth"
+    ],
+    "counts": {
+      "teeth": 2,
+      "pulp": 7
+    },
+    "source": "STS25",
+    "annotation": "Reference segmentation surface",
+    "license": "Source dataset terms",
+    "frontSign": -1,
+    "orientation": "Upper dentition above lower dentition; label-verified",
+    "orientationCorrected": false
+  },
+  {
+    "id": "STS25_Train_Labeled_0013",
+    "subset": "STS25",
+    "title": "STS25 \u00b7 0013",
+    "file": "STS25_Train_Labeled_0013.glb",
+    "groups": [
+      "pulp",
+      "teeth"
+    ],
+    "counts": {
+      "teeth": 2,
+      "pulp": 7
+    },
+    "source": "STS25",
+    "annotation": "Reference segmentation surface",
+    "license": "Source dataset terms",
+    "frontSign": -1,
+    "orientation": "Upper dentition above lower dentition; label-verified",
+    "orientationCorrected": false
+  },
+  {
+    "id": "STS25_Train_Labeled_0014",
+    "subset": "STS25",
+    "title": "STS25 \u00b7 0014",
+    "file": "STS25_Train_Labeled_0014.glb",
+    "groups": [
+      "pulp",
+      "teeth"
+    ],
+    "counts": {
+      "teeth": 2,
+      "pulp": 7
+    },
+    "source": "STS25",
+    "annotation": "Reference segmentation surface",
+    "license": "Source dataset terms",
+    "frontSign": -1,
+    "orientation": "Upper dentition above lower dentition; label-verified",
+    "orientationCorrected": false
+  }
+]
