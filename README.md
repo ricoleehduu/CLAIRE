@@ -18,8 +18,7 @@
 <b><a href="https://ricoleehduu.github.io/CLAIRE/">Project page</a></b> ·
 <b><a href="https://ricoleehduu.github.io/CLAIRE/lab/">Evidence Lab</a></b> ·
 <b><a href="#3d-reference-anatomy">3D atlas</a></b> ·
-<b><a href="#repository-layout">Layout</a></b> ·
-<b><a href="#citation">Citation</a></b>
+<b><a href="#repository-layout">Layout</a></b>
 </p>
 
 </div>
@@ -206,18 +205,6 @@ paths intact.
 
 Non-commercial research and review use. A code license will accompany the public release; until
 then no license is granted for reuse of the source files.
-
-## Citation
-
-```bibtex
-@misc{claire2027,
-  title        = {CLAIRE: Clinically-Aligned and Auditable Quality Evaluation
-                  for Dental CBCT Reconstruction},
-  year         = {2027},
-  howpublished = {\url{https://ricoleehduu.github.io/CLAIRE/}},
-  note         = {Manuscript under review}
-}
-```
 
 <div align="center">
 <sub>Built as a static research showcase · no tracking, no third-party analytics, no clinical data.</sub>
